@@ -5,6 +5,7 @@ from vosk import Model
 r = sr.Recognizer()
 source = sr.Microphone()
 model = Model("model/")
+
 timestr = time.strftime("H(%H) - M(%M) - S(%S)")
 moment = time.strftime("%Y-%b-%d__%H_%M_%S", time.localtime())
 f = open(moment+'.log', 'w')
@@ -30,7 +31,7 @@ while init:
             else:
                 result = "{}".format(MyText)
 
-            print(MyText)
+            # print(MyText)
             f.write("\n" + timestr + "\n" + MyText)
             print(result)                
 
