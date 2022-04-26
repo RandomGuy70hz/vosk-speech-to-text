@@ -7,8 +7,8 @@ source = sr.Microphone()
 model = Model("model/")
 timestr = time.strftime("H(%H) - M(%M) - S(%S)")
 moment = time.strftime("%Y-%b-%d__%H_%M_%S", time.localtime())
-
 f = open(moment+'.log', 'w')
+
 init = True
 
 while init:
@@ -16,7 +16,6 @@ while init:
     try: 
 
         with sr.Microphone() as source:
-
 
             print("recording...")
             r.adjust_for_ambient_noise(source, duration=0.2)
@@ -32,14 +31,8 @@ while init:
                 result = "{}".format(MyText)
 
             print(MyText)
-            f.write("\n")
-            f.write(timestr)
-            f.write("\n")
-            f.write(MyText)
-            f.write("\n")
+            f.write("\n" + timestr + "\n" + MyText)
             print(result)                
-
-
 
     except sr.RequestError as e:
         print("Could not request results; {0}".format(e))
