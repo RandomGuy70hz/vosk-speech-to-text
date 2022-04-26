@@ -1,6 +1,6 @@
 # Simple speech to text recognition script with file output using Vosk api.
 
-Great alternative to Pocketsphinx; Created by the developers of Pocketsphinx.
+Vosk is a great alternative to Pocketsphinx; Created by the developers of Pocketsphinx.
 
 Prerequisets:
   - pip install vosk - https://alphacephei.com/vosk/
